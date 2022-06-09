@@ -1,0 +1,17 @@
+version: "3"
+services:
+  hello:
+    build: hello
+    container_name: hello-docker
+    image: hello-docker
+    ports:
+      - 8080:80
+    environment:
+    # Let's pretend this is running in Fargate or on an EC2 instance.
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AWS_SESSION_TOKEN
+      - AWS_REGION=us-east-1
+    # For Cloud9, uncomment the below instead
+    #volumes:
+    #  - '/home/ubuntu/.aws:/root/.aws:ro'
