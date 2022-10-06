@@ -4,7 +4,7 @@
 run:
 	docker-compose up --build
 
-# Yes this is the hardcoded secret. No, this is not where you need to fix is.
+# Yes this is the hardcoded secret. No, this is not where you need to fix it.
 test:
 	curl --verbose 'http://dev:swordfish123@localhost:8080'
 
