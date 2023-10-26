@@ -2,7 +2,7 @@ FROM nginx:latest
 
 RUN true \
   && apt-get -y update \
-  && DEBIAN_FRONTEND=noninteractive apt-get -qq install openssl \
+  && DEBIAN_FRONTEND=noninteractive apt-get -qq install openssl aws-cli \
   && rm -rf /var/lib/apt/lists/*
 
 RUN true \
